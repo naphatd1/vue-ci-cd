@@ -26,3 +26,14 @@ jobs:
         with:
           name: dist-production
           path: dist
+
+  deploy-to-production:
+    needs: build-production-job
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download dist folder artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: dist-production
+
+      - run: ls
