@@ -28,12 +28,16 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: '159.223.41.181'
-          username: 'root'
-          password: '$Admin_1jj395qu'
+          #host: '159.223.41.181'
+          #username: 'root'
+          #password: '$Admin_1jj395qu'
+          #port: '22'
+          host: '192.168.2.29'
+          username: 'naphat'
+          password: 'naphat1'
           port: '22'
           script: |
-            whoami
+          
             docker logout ghcr.io
             docker login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}  ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}
             docker rm -f ${{ env.CONTAINER_NAME }}
