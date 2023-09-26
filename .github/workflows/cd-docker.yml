@@ -32,12 +32,12 @@ jobs:
           #username: 'root'
           #password: '$Admin_1jj395qu'
           #port: '22'
-          host: '192.168.2.29'
+          host: '110.170.148.96'
           username: 'naphat'
           password: 'naphat1'
           port: '22'
           script: |
-          
+
             docker logout ghcr.io
             docker login -u ${{ github.actor }} -p ${{ secrets.GITHUB_TOKEN }}  ghcr.io/${{ github.actor }}/${{ github.event.repository.name }}
             docker rm -f ${{ env.CONTAINER_NAME }}
