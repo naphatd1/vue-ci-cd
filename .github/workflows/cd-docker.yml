@@ -28,9 +28,9 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@v1.0.0
         with:
-          host: '192.168.2.29'
-          username: 'naphat'
-          password: 'naphat1'
+          host: '159.223.41.181'
+          username: 'root'
+          password: '$Admin_1jj395qu'
           port: '22'
           script: |
             whoami
