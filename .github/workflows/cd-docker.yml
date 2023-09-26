@@ -6,7 +6,7 @@ on:
       - '*'
 
 jobs:
-  brelease-docker-image-job:
+  release-docker-image-job:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
